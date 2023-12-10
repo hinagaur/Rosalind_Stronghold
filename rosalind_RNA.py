@@ -11,6 +11,3 @@ def DnatoRna(nucleic_acid : str) -> str:
 if __name__ == '__main__':
     comp= DnatoRna("rosalind_data/rosalind_rna.txt")
     print(comp)
-
-
-

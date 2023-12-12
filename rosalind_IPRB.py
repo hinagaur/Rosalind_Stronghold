@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 
-def dom_prcnt(hom_dom_no: int, het_rec_no: int, het_no: int)-> float:
+def dom_prcnt(hom_dom_no: int, het_no: int, hom_rec_no: int,)-> float:
     """
     Calculates the probability that two randomly selected mating organisms will produce an individual possessing a 
               dominant allele
 
     Args:
-        homozygous_dominant_count (int): Number of individuals with homozygous dominant genotype (DD).
-        heterozygous_recessive_count (int): Number of individuals with heterozygous recessive genotype (dd).
-        heterozygous_count (int): Number of individuals with heterozygous genotype (Dd).
+       hom_dom_no(int): Number of individuals with homozygous dominant genotype (DD).
+        het_no (int): Number of individuals with heterozygous genotype (Dd).
+        hom_rec_no (int): Number of individuals with homozygous recessive genotype (dd).
 
     Returns:
         float: The probability that two randomly selected mating organisms will produce an individual possessing a 
               dominant allele (and thus displaying the dominant phenotype). Assume that any two organisms can mate.
     """
     hom_dom = 'DD'
-    het_rec = 'dd'
+    hom_rec = 'dd'
     het = 'Dd'
 
     #Initializing a list containing all the homozygous dominant(DD), heterozygous(dD), and homozygous recessive(dd)
@@ -24,8 +24,8 @@ def dom_prcnt(hom_dom_no: int, het_rec_no: int, het_no: int)-> float:
     for _ in range(hom_dom_no):
        list_1.append(hom_dom)
 
-    for _ in range(het_rec_no):
-       list_1.append(het_rec)
+    for _ in range(hom_rec_no):
+       list_1.append(hom_rec)
 
     for _ in range(het_no):
         list_1.append(het)
@@ -59,5 +59,5 @@ def dom_prcnt(hom_dom_no: int, het_rec_no: int, het_no: int)-> float:
     return round(percentage,5)
 
 if __name__ == '__main__':
-    print(dom_prcnt(2,2,2))
+    print(dom_prcnt(29 ,21 ,26))
 

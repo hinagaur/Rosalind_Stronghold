@@ -19,7 +19,16 @@ codon_table = {
     "GAU":"D", "GAC":"D", "GAA":"E", "GAG":"E",
     "GGU":"G", "GGC":"G", "GGA":"G", "GGG":"G"}
 
-def RnaToProt(mrna: str)-> float:
+
+def RnaToProt(mrna: str)-> str:
+    '''Translate an mRNA sequence into a protein sequence.
+
+    Args:
+        file_path (str): The path to a text file containing the mRNA sequence.
+
+    Returns:
+        str: The translated protein sequence.
+    '''
     
     #Opening the file containing the mrna sequence
     mrna_seq = open(mrna, "r").read().strip()

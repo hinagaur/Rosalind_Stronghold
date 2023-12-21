@@ -60,4 +60,4 @@ def dom_prcnt(hom_dom_no: int, het_no: int, hom_rec_no: int,)-> float:
 
 if __name__ == '__main__':
     print(dom_prcnt(29 ,21 ,26))
-
+    

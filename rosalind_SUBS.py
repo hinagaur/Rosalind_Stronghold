@@ -1,11 +1,22 @@
 #!/usr/bin/env python3
 
-def find_motif(DNA_string_1: str, DNA_string_2: str) -> list:
+# s = 'GATATATGCATATACTT'
+# t= 'ATAT'
+
+def substr(s: str, t: str) -> list:
+    ''' Given two DNA strings s and t (each of length at most 1 kbp), this function return all locations of t as a substring of s.
     '''
-    Given two DNA strings, DNA_string_1 and DNA_string_2 (each of length at most 1 kbp), this function  returns
-    all locations of DNA_string_2  as a substring of DNA_string_1.
-    '''
-    return [n+1 for n in range(len(DNA_string_1)) if DNA_string_1.find(DNA_string_2 , n) == n]
+    my_list = []
+    for i in range(len(s)):
+        if s[i:].startswith(t):
+            my_list.append(i+1)
+    return my_list
 
 if __name__ == '__main__':
-    print(find_motif('GATATATGCATATACTT', 'ATAT'))
+    s = 'GATATATGCATATACTT'
+    t= 'ATAT'
+    print(substr(s,t))
+
+
+
+    
